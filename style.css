@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+:root {
+  --white: white;
+  --red: red;
+  --green: green;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  color: var(--white);
+}
+.container {
+  height: 600px;
+  width: 500px;
+  min-width: 270px;
+  /* background-color: rgb(90, 46, 173); */
+  background-color: rgb(90, 46, 173, 0.9);
+
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-top: 10px;
+}
+form {
+  height: 80%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.form-control {
+  margin: 40px 0px;
+  width: 100%;
+  position: relative;
+}
+.form-control label {
+  position: absolute;
+  color: var(--white);
+  top: -8px;
+  display: block;
+  width: 95%;
+  box-sizing: border-box;
+}
+input {
+  background-color: transparent;
+  outline: none;
+  border: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid white;
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  padding: 8px 0px;
+  color: red;
+}
+input:focus,
+input:valid {
+  background-color: transparent !important;
+  border: 2px solid transparent;
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(27, 216, 128);
+  border-radius: 6px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+}
+.btn:active {
+  border: none;
+  outline: none;
+  transform: scale(0.95);
+}
+p {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--white);
+}
+a {
+  text-decoration: none;
+  color: rgb(14, 247, 138);
+}
+a:hover {
+  text-decoration: underline;
+}
+label span {
+  font-size: 16px;
+  min-width: 5px;
+  display: inline-block;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control input:focus + label span {
+  color: rgb(14, 247, 138);
+  transform: translateY(-15px);
+}
+
+/* form validation  css  */
+.form-control small {
+  visibility: hidden;
+  display: block;
+}
+.form-control.error small {
+  color: red;
+  visibility: visible;
+}
+.form-control.success small {
+  color: rgb(14, 247, 138);
+  visibility: visible;
+}
